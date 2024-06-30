@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MentorController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\RegistrationController;
 
@@ -28,6 +29,7 @@ Route::middleware([
     Route::get('/form-register', [RegistrationController::class, 'showRegistrationForm'])->name('form-register');
     Route::post('/form-register', [RegistrationController::class, 'processRegistration']);
     Route::get('/subject', [SubjectController::class, 'showSubjects'])->name('subject');
+    Route::resource('mentors', MentorController::class);
 });
 
 

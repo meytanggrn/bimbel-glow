@@ -33,6 +33,6 @@ class RegistrationController extends Controller
         $registration->save();
 
         // Redirect ke halaman lain atau tampilkan pesan sukses
-        return redirect()->route('subject')->with('success', 'Registrasi berhasil!');
+        return redirect('subject')->route('subject')->with('success', 'Registrasi berhasil!');
     }
 }

@@ -24,7 +24,6 @@
                     <div class="mb-4" id="matpelContainer">
                         <label for="mata_pelajaran" class="block text-sm font-medium text-gray-700">Mata Pelajaran</label>
                         <select name="mata_pelajaran" id="mata_pelajaran" class="form-select rounded-md shadow-sm mt-1 block w-full" required>
-                            <!-- Options akan di-generate menggunakan JavaScript -->
                         </select>
                     </div>
 
