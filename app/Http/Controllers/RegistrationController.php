@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Midtrans\Snap;
 use Midtrans\Config;
+use App\Models\Price;
 use Midtrans\Notification;
 use Illuminate\Http\Request;
 use App\Models\Registration; 
@@ -106,5 +107,20 @@ class RegistrationController extends Controller
         }
 
         return;
+    }
+
+    public function showPaymentForm(Request $request)
+    {
+        $jenjang = $request->input('jenjang');
+        $selectedSubjects = $request->input('subjects'); // Ambil mata pelajaran yang dipilih
+
+        // Ambil data harga mata pelajaran dari database berdasarkan jenjang
+        $subjectPrices = Price::where('jenjang', $jenjang)->get();
+
+        return view('payment', [
+            'jenjang' => $jenjang,
+            'selectedSubjects' => $selectedSubjects,
+            'subjectPrices' => $subjectPrices,
+        ]);
     }
 }

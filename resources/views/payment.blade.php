@@ -8,35 +8,39 @@
     <div class="py-8">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-6">
-                <p>Silakan lakukan pembayaran dengan menekan tombol di bawah ini.</p>
-                <button id="pay-button" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Bayar Sekarang</button>
-                <!-- Menampilkan informasi mata pelajaran yang dipilih -->
-                @if (!empty($selectedSubjects))
-                    <p>Mata Pelajaran: {{ implode(', ', $selectedSubjects) }}</p>
+                @if (session('success'))
+                    <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+                        <strong class="font-bold">Sukses!</strong>
+                        <span class="block sm:inline">{{ session('success') }}</span>
+                    </div>
                 @endif
+
+                <div>
+                    <p>Jenjang: {{ $jenjang }}</p>
+                    <p>Mata Pelajaran Dipilih:</p>
+                    <ul>
+                        @foreach ($selectedSubjects as $subject)
+                            <li>{{ $subject }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                <form action="{{ url('/') }}" method="POST" class="w-full items-center">
+                    @csrf
+                    <div id="subjects-container">
+                        @foreach ($subjectPrices as $subjectPrice)
+                            <div class="mb-4">
+                                <label for="{{ $subjectPrice->subject->name }}" class="block text-sm font-medium text-gray-700">{{ $subjectPrice->subject->name }}</label>
+                                <p class="text-gray-700">Harga: {{ $subjectPrice->price }}</p>
+                            </div>
+                        @endforeach
+                    </div>
+                    <div class="flex items-center justify-end mt-4">
+                        <button type="submit" class="bg-blue-500 text-black px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
+                            Lanjutkan Pembayaran
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-
-    <!-- Include script untuk Midtrans Snap -->
-    <script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="{{ env('MIDTRANS_CLIENT_KEY') }}"></script>
-    <script type="text/javascript">
-        document.getElementById('pay-button').onclick = function(){
-          // SnapToken acquired from previous step
-        snap.pay('{{ $transaction->snap_token }}', {
-            // Optional
-            onSuccess: function(result){
-            document.getElementById('result-json').innerHTML += JSON.stringify(result, null, 2);
-            },
-            // Optional
-            onPending: function(result){
-            document.getElementById('result-json').innerHTML += JSON.stringify(result, null, 2);
-            },
-            // Optional
-            onError: function(result){
-            document.getElementById('result-json').innerHTML += JSON.stringify(result, null, 2);
-            }
-        });
-        };
-    </script>
 </x-app-layout>
