@@ -16,7 +16,7 @@
                         {{ __('Beranda') }}
                     </x-nav-link>
                     <x-nav-link href="{{ route('jenjang') }}" :active="request()->routeIs('jenjang')">
-                        {{ __('Jenjang') }}
+                        {{ __('Paket Belajar') }}
                     </x-nav-link>
                     <x-nav-link href="{{ route('tentangkami') }}" :active="request()->routeIs('tentangkami')">
                         {{ __('Tentang Kami') }}

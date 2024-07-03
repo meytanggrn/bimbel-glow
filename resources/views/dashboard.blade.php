@@ -4,15 +4,12 @@
             {{ __('Selamat datang di GlowMath Course') }}
         </h2>
     </x-slot>
-
-    <!-- Container untuk foto dan tombol register -->
     <div class="bg-teal-300 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
             <div class="text-center mb-6">
-                <!-- Gambar bisa disesuaikan dengan ukuran dan gaya yang diinginkan -->
                 <img src="../../../img/register-photo.png" alt="Welcome Image" class="w-full rounded-lg shadow-md">
             </div>
-            <a href="{{ route('register') }}"
+            <a href="{{ route('form-register') }}"
                 class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md shadow-md">
                 Daftar Sekarang
             </a>
@@ -106,7 +103,6 @@
                 <div class="item">
                     <img src="../../../img/t-08.jpg" alt="Testimonial 8" class="w-full rounded-lg shadow-md">
                 </div>
-                <!-- Pastikan jumlah gambar sesuai dengan jumlah yang ingin ditampilkan -->
             </div>
         </div>
     </div>

@@ -20,6 +20,9 @@ class CreateRegistrationsTable extends Migration
             $table->string('jenjang');
             $table->string('parent_phone');
             $table->string('school');
+            $table->string('class_type');
+            $table->text('group_info')->nullable();
+            $table->json('subjects');
             $table->timestamps();
         });
     }

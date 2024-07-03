@@ -29,7 +29,9 @@ Route::middleware([
     Route::get('/form-register', [RegistrationController::class, 'showRegistrationForm'])->name('form-register');
     Route::post('/form-register', [RegistrationController::class, 'processRegistration']);
     Route::get('/subject', [SubjectController::class, 'showSubjects'])->name('subject');
+    Route::post('/subject', [SubjectController::class, 'getSubjects']);
     Route::resource('mentors', MentorController::class);
+    Route::post('/payment', [RegistrationController::class, 'payment'])->name('payment');
 });
 
 
