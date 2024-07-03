@@ -30,7 +30,7 @@
                 </div>
 
                 <!-- Kotak-kotak Jenjang -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
                     <div class="bg-gray-100 p-6 rounded-lg shadow-md">
                         <img src="../../../img/reg.png" alt="SD Image" class="w-full h-full object-cover rounded-md mb-4">
                         {{-- <h3 class="text-lg font-semibold mb-2 text-center">SD</h3> --}}

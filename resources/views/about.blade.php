@@ -37,28 +37,28 @@
                             <ul class="list-disc list-inside space-y-2">
                                 <li class="flex items-start py-2">
                                     <div
-                                        class="w-10 h-10 flex justify-center items-center bg-green-500 text-black rounded-md text-lg font-bold">
+                                        class="w-10 h-10 flex justify-center items-center bg-green-300 text-white rounded-md text-lg font-bold">
                                         1</div>
                                     <span class="text-gray-700">Memberikan pelayanan yang berkualitas untuk meningkatkan
                                         pemahaman dan prestasi akademis siswa.</span>
                                 </li>
                                 <li class="flex items-start py-2">
                                     <div
-                                        class="w-10 h-10 flex justify-center items-center bg-green-500 text-black rounded-md text-lg font-bold">
+                                        class="w-10 h-10 flex justify-center items-center bg-green-300 text-white rounded-md text-lg font-bold">
                                         2</div>
                                     <span class="text-gray-700">Mengembangkan metode pembelajaran yang inovatif yang
                                         sesuai dengan kebutuhan individu dan kurikulum terkini.</span>
                                 </li>
                                 <li class="flex items-start py-2">
                                     <div
-                                        class="w-10 h-10 flex justify-center items-center bg-green-500 text-black rounded-md text-lg font-bold">
+                                        class="w-10 h-10 flex justify-center items-center bg-green-300 text-white rounded-md text-lg font-bold">
                                         3</div>
                                     <span class="text-gray-700">Menyediakan lingkungan belajar yang nyaman dan mendukung
                                         untuk meningkatkan motivasi dan konsentrasi belajar siswa.</span>
                                 </li>
                                 <li class="flex items-start py-2 mb-4">
                                     <div
-                                        class="w-10 h-10 flex justify-center items-center bg-green-500 text-black rounded-md text-lg font-bold">
+                                        class="w-10 h-10 flex justify-center items-center bg-green-300 text-white rounded-md text-lg font-bold">
                                         4</div>
                                     <span class="text-gray-700">Melakukan evaluasi dan peningkatan yang berkelanjutan
                                         dalam semua aspek layanan bimbingan belajar.</span>
